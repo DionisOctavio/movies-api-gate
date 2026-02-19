@@ -28,7 +28,7 @@ describe('MoviesService', () => {
   it('should be defined', () => {
     expect(service).toBeDefined();
     // Access private property to ensure constructor assignment covered
-    expect((service as any).movieRepo).toBeDefined();
+    expect(service['movieRepo']).toBeDefined();
   });
 
   it('listMovies() devuelve lo que devuelve el repo', async () => {
